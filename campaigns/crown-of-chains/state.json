@@ -8,9 +8,9 @@
   "status": "active",
   "created": "2026-10-18",
   "tier": 1,
-  "turn": 0,
+  "turn": 1,
   "day": 1,
-  "timeOfDay": "morning",
+  "timeOfDay": "midday",
   "location": "ashford",
   "party": [
     {
@@ -36,8 +36,14 @@
     {
       "id": "tax-day",
       "title": "Tax Day in Ashford",
+      "status": "done",
+      "notes": "Escaped Magister Krake in a cloud of smoke."
+    },
+    {
+      "id": "rescue-pip",
+      "title": "Rescue Pip Marlow",
       "status": "active",
-      "notes": "The king's Collectors and a Magister have come to Ashford to count the town. Nobody knows who, or what, they'll take."
+      "notes": "Magister Krake took Pip, the miller's daughter, in his prison wagon. Hetty Bramblewick may know where the wagons go."
     }
   ],
   "npcs": {
@@ -46,14 +52,14 @@
       "location": "ashford",
       "role": "innkeeper of the Kettle & Crow",
       "attitude": "friendly",
-      "notes": "Kind and nosy. Secretly an old rebel courier with a smugglers' tunnel in her cellar."
+      "notes": "Kind and nosy. Secretly an old rebel courier with a smugglers' tunnel in her cellar. Hid the heroes in the Kettle & Crow after Tax Day."
     },
     "pip-marlow": {
       "name": "Pip Marlow",
-      "location": "ashford",
+      "location": "taken",
       "role": "the miller's daughter, aged 10",
       "attitude": "friendly",
-      "notes": "Has a spark of magic: flowers bloom around her when she's nervous."
+      "notes": "Has a spark of magic: flowers bloom around her when she's nervous. Taken by Magister Krake's chains on Tax Day."
     },
     "fen-marlow": {
       "name": "Old Fen Marlow",
@@ -74,7 +80,7 @@
       "location": "ashford",
       "role": "one of the king's five Magisters; leads the hunts for the gifted",
       "attitude": "hostile",
-      "notes": "Pompous, carries a ledger and counts everything. Arcane chain magic."
+      "notes": "Pompous, carries a ledger and counts everything. Arcane chain magic. Has seen Magnus's black scales and wants him badly."
     },
     "pomfrey-trumpington": {
       "name": "Pomfrey Trumpington",
