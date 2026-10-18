@@ -1,0 +1,99 @@
+{
+  "id": "magnus",
+  "name": "Magnus",
+  "player": "Son",
+  "class": "mage",
+  "title": null,
+  "level": 1,
+  "xp": 0,
+  "stats": {
+    "might": 0,
+    "agility": 1,
+    "wits": 1,
+    "magic": 3
+  },
+  "boons": {
+    "hp": 0,
+    "mana": 0,
+    "armor": 0,
+    "resist": {}
+  },
+  "abilities": [
+    {
+      "id": "elemental-affinity",
+      "source": "mage",
+      "name": "Elemental Affinity",
+      "choice": "Arcane"
+    },
+    {
+      "id": "quick-study",
+      "source": "mage",
+      "name": "Quick Study"
+    }
+  ],
+  "spells": [
+    {
+      "id": "light",
+      "rank": 1,
+      "mastery": 0
+    },
+    {
+      "id": "spark",
+      "rank": 1,
+      "mastery": 0
+    },
+    {
+      "id": "arcane-missile",
+      "rank": 1,
+      "mastery": 0
+    }
+  ],
+  "equipped": {
+    "head": null,
+    "body": {
+      "name": "Apprentice Robes",
+      "rarity": "common",
+      "value": 5
+    },
+    "gloves": null,
+    "boots": null,
+    "mainHand": {
+      "name": "Oak Staff",
+      "rarity": "common",
+      "damage": "1d6",
+      "damageType": "physical",
+      "twoHanded": true,
+      "value": 5
+    },
+    "offHand": null,
+    "ring1": null,
+    "ring2": null,
+    "neck": null
+  },
+  "backpack": [
+    {
+      "name": "Spellbook (blank pages)",
+      "rarity": "common",
+      "special": [
+        "Copy spells you find so you never forget them"
+      ],
+      "value": 25
+    },
+    {
+      "name": "Mana Potion",
+      "rarity": "common",
+      "consumable": true,
+      "special": [
+        "Restores 2d4+2 mana"
+      ],
+      "value": 30,
+      "qty": 1
+    }
+  ],
+  "gold": 20,
+  "appearance": "A reptilian mage with rare black scales, the colour of a moonless night.",
+  "backstory": "Among his scaled people, black scales are an old sign of deep arcane power. The king's magisters hunt such gifted ones and carry them off to their tower. Magnus escaped them before they could take him, and he means to stop them taking anyone else.",
+  "personality": "Serious and dangerous. He says little, and when he speaks, people listen.",
+  "activeCampaign": null,
+  "history": []
+}

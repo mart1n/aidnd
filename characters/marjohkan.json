@@ -1,0 +1,100 @@
+{
+  "id": "marjohkan",
+  "name": "Marjohkan",
+  "player": "Dad",
+  "class": "rogue",
+  "title": null,
+  "level": 1,
+  "xp": 0,
+  "stats": {
+    "might": 0,
+    "agility": 3,
+    "wits": 1,
+    "magic": 1
+  },
+  "boons": {
+    "hp": 0,
+    "mana": 0,
+    "armor": 0,
+    "resist": {}
+  },
+  "abilities": [
+    {
+      "id": "sneak-attack",
+      "source": "rogue",
+      "name": "Sneak Attack"
+    },
+    {
+      "id": "slippery",
+      "source": "rogue",
+      "name": "Slippery"
+    }
+  ],
+  "spells": [],
+  "equipped": {
+    "head": null,
+    "body": {
+      "name": "Leather Armor",
+      "rarity": "common",
+      "armor": 1,
+      "value": 10
+    },
+    "gloves": null,
+    "boots": null,
+    "mainHand": {
+      "name": "Dagger",
+      "rarity": "common",
+      "damage": "1d4",
+      "damageType": "physical",
+      "light": true,
+      "value": 2
+    },
+    "offHand": {
+      "name": "Dagger",
+      "rarity": "common",
+      "damage": "1d4",
+      "damageType": "physical",
+      "light": true,
+      "value": 2
+    },
+    "ring1": null,
+    "ring2": null,
+    "neck": null
+  },
+  "backpack": [
+    {
+      "name": "Thieves' Tools",
+      "rarity": "common",
+      "special": [
+        "Needed to pick locks and disarm traps"
+      ],
+      "value": 25
+    },
+    {
+      "name": "Healing Potion",
+      "rarity": "common",
+      "consumable": true,
+      "special": [
+        "Restores 2d4+2 HP"
+      ],
+      "value": 25,
+      "qty": 1
+    },
+    {
+      "name": "Smoke Bomb",
+      "rarity": "common",
+      "consumable": true,
+      "special": [
+        "Fills an area with smoke; everyone inside becomes Hidden"
+      ],
+      "value": 20,
+      "qty": 1
+    }
+  ],
+  "gold": 30,
+  "appearance": "Human, with long black hair and a large duelling scar slashed across his face.",
+  "backstory": "The king had his whole family killed. Marjohkan survived, and now he wants revenge on the king and everyone who serves him.",
+  "personality": "Charismatic and well liked. He could talk a man into giving him his last coin.",
+  "activeCampaign": null,
+  "history": []
+}
