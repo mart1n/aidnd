@@ -1,0 +1,160 @@
+{
+  "_note": "Class data used by scripts/game.py and the skills. Add a class by adding an entry here (see rules/rules.md section 7 for how abilities are gained).",
+  "warrior": {
+    "name": "Warrior",
+    "emoji": "⚔️",
+    "pitch": "Tough, brave and hard to knock down. Wears heavy armor and protects friends.",
+    "keyStat": "might",
+    "hp": { "base": 14, "perLevel": 6 },
+    "mana": { "base": 2, "perLevel": 1 },
+    "startingAbilities": ["second-wind", "mighty-blow"],
+    "startingSpells": { "fixed": [], "choose": 0, "from": [] },
+    "startingGold": 20,
+    "kit": {
+      "mainHand": { "name": "Longsword", "rarity": "common", "damage": "1d8", "damageType": "physical", "value": 15 },
+      "offHand": { "name": "Round Shield", "rarity": "common", "armor": 1, "value": 10 },
+      "body": { "name": "Chain Shirt", "rarity": "common", "armor": 2, "value": 50 },
+      "backpack": [
+        { "name": "Healing Potion", "rarity": "common", "consumable": true, "special": ["Restores 2d4+2 HP"], "value": 25 },
+        { "name": "Rope (50 ft)", "rarity": "common", "value": 1 },
+        { "name": "Torch", "rarity": "common", "value": 1 }
+      ]
+    },
+    "abilities": {
+      "second-wind": { "name": "Second Wind", "level": 1, "uses": "once per rest", "text": "As your action, heal 1d10 + your level." },
+      "mighty-blow": { "name": "Mighty Blow", "level": 1, "uses": "once per fight", "text": "Declare before an attack roll: on a hit, roll the weapon's damage dice twice." },
+      "shield-wall": { "name": "Shield Wall", "level": 2, "uses": "once per fight", "text": "Until your next turn, you and every ally next to you gain Armor +2 and Resist all +1." },
+      "battle-cry": { "name": "Battle Cry", "level": 3, "uses": "once per fight", "text": "As your action: every ally has advantage on their next attack, and Frightened ends for all of you." },
+      "cleave": { "name": "Cleave", "level": 4, "uses": "always", "text": "When your melee attack drops an enemy, make a free attack against another enemy next to you." },
+      "iron-skin": { "name": "Iron Skin", "level": 6, "uses": "always", "text": "You permanently gain Armor +1 (on top of gear)." },
+      "unstoppable": { "name": "Unstoppable", "level": 8, "uses": "once per rest", "text": "Instantly end Frozen, Slowed, Stunned or Frightened on yourself, even on the enemy's turn." },
+      "whirlwind": { "name": "Whirlwind", "level": 10, "uses": "once per fight", "text": "As your action, attack every enemy within reach, rolling separately for each." }
+    },
+    "milestoneIdeas": ["Titles like the Unbroken, Ironheart, Giant-Feller", "A legendary charge that knocks down everything in a line", "Refuse to fall: once per day, drop to 1 HP instead of 0", "A war shout that makes lesser enemies flee"]
+  },
+  "rogue": {
+    "name": "Rogue",
+    "emoji": "🗡️",
+    "pitch": "Quick, sneaky and clever. Picks locks, finds traps and strikes from the shadows.",
+    "keyStat": "agility",
+    "hp": { "base": 10, "perLevel": 4 },
+    "mana": { "base": 4, "perLevel": 2 },
+    "startingAbilities": ["sneak-attack", "slippery"],
+    "startingSpells": { "fixed": [], "choose": 0, "from": [] },
+    "startingGold": 30,
+    "kit": {
+      "mainHand": { "name": "Dagger", "rarity": "common", "damage": "1d4", "damageType": "physical", "light": true, "value": 2 },
+      "offHand": { "name": "Dagger", "rarity": "common", "damage": "1d4", "damageType": "physical", "light": true, "value": 2 },
+      "body": { "name": "Leather Armor", "rarity": "common", "armor": 1, "value": 10 },
+      "backpack": [
+        { "name": "Thieves' Tools", "rarity": "common", "special": ["Needed to pick locks and disarm traps"], "value": 25 },
+        { "name": "Healing Potion", "rarity": "common", "consumable": true, "special": ["Restores 2d4+2 HP"], "value": 25 },
+        { "name": "Smoke Bomb", "rarity": "common", "consumable": true, "special": ["Fills an area with smoke; everyone inside becomes Hidden"], "value": 20 }
+      ]
+    },
+    "abilities": {
+      "sneak-attack": { "name": "Sneak Attack", "level": 1, "uses": "once per turn", "text": "When you attack with advantage, or an ally is next to your target, add 2d6 damage. +1d6 more at levels 5, 10, 15 and so on." },
+      "slippery": { "name": "Slippery", "level": 1, "uses": "once per fight", "text": "Reroll a failed Agility roll and keep the new result." },
+      "trap-sense": { "name": "Trap Sense", "level": 2, "uses": "always", "text": "Advantage to spot and disarm traps and pick locks." },
+      "shadow-dodge": { "name": "Shadow Dodge", "level": 3, "uses": "once per fight", "text": "After you're hit, halve the damage." },
+      "poison-blade": { "name": "Poison Blade", "level": 4, "uses": "once per fight", "text": "Coat your blade: your next hit adds 1d6 poison per tier and makes the target Poisoned." },
+      "vanish": { "name": "Vanish", "level": 6, "uses": "once per fight", "text": "Become Hidden as your action, even while enemies are watching." },
+      "flurry": { "name": "Flurry", "level": 8, "uses": "always", "text": "Your off-hand weapon adds your Agility to its damage." },
+      "assassinate": { "name": "Assassinate", "level": 10, "uses": "always", "text": "Your first attack against an enemy that hasn't noticed you is an automatic critical hit if it lands." }
+    },
+    "milestoneIdeas": ["Titles like the Unseen, Quickfingers, Shadowmark", "Step through shadows to anywhere you can see", "Steal a magical effect or a spell right off an enemy", "A strike that ignores all Armor and resistances"]
+  },
+  "ranger": {
+    "name": "Ranger",
+    "emoji": "🏹",
+    "pitch": "Hunter and explorer of the wild. Deadly with a bow, friend to animals, never lost.",
+    "keyStat": "agility",
+    "hp": { "base": 12, "perLevel": 5 },
+    "mana": { "base": 4, "perLevel": 2 },
+    "startingAbilities": ["hunters-mark", "pathfinder"],
+    "startingSpells": { "fixed": [], "choose": 0, "from": [] },
+    "startingGold": 20,
+    "kit": {
+      "mainHand": { "name": "Longbow", "rarity": "common", "damage": "1d8", "damageType": "physical", "twoHanded": true, "ranged": true, "value": 50 },
+      "body": { "name": "Leather Armor", "rarity": "common", "armor": 1, "value": 10 },
+      "boots": { "name": "Traveller's Boots", "rarity": "common", "value": 5 },
+      "backpack": [
+        { "name": "Shortsword", "rarity": "common", "damage": "1d6", "damageType": "physical", "light": true, "value": 10 },
+        { "name": "Healing Potion", "rarity": "common", "consumable": true, "special": ["Restores 2d4+2 HP"], "value": 25 },
+        { "name": "Trail Rations (5 days)", "rarity": "common", "value": 5 }
+      ]
+    },
+    "abilities": {
+      "hunters-mark": { "name": "Hunter's Mark", "level": 1, "uses": "once per fight", "text": "Mark one enemy (free): your attacks against it deal +1d4 damage (+1d4 more per tier) and you always know where it is." },
+      "pathfinder": { "name": "Pathfinder", "level": 1, "uses": "always", "text": "Advantage on tracking, foraging and finding the way. Once per journey, the party may reroll a travel encounter check." },
+      "animal-companion": { "name": "Animal Companion", "level": 2, "uses": "always", "text": "A loyal beast (wolf, hawk, boar, lynx…) joins you. It acts on your turn: attack d20 + your Agility, damage 1d6 + tier. It has HP equal to half yours, and it grows with you." },
+      "camouflage": { "name": "Camouflage", "level": 3, "uses": "always", "text": "In natural terrain you can become Hidden as your action." },
+      "volley": { "name": "Volley", "level": 4, "uses": "once per fight", "text": "As your action, make a ranged attack against up to three different targets." },
+      "favored-foe": { "name": "Favored Foe", "level": 6, "uses": "always", "text": "Choose a kind of creature (goblins, undead, dragons…). +2 damage and advantage on Wits checks about them. You can take this again for a new kind." },
+      "natures-gift": { "name": "Nature's Gift", "level": 8, "uses": "always", "text": "Learn any two Nature spells. Your Nature spells cost 1 less mana (minimum 1)." },
+      "rain-of-arrows": { "name": "Rain of Arrows", "level": 10, "uses": "once per rest", "text": "Every enemy in a wide area must dodge (against 10 + your Agility + tier) or take your weapon damage twice." }
+    },
+    "milestoneIdeas": ["Titles like Wildheart, the Far-Seeing, Stormarrow", "Your companion evolves into a legendary beast (dire wolf, thunder hawk)", "An arrow that never misses, once per fight", "Speak with every living creature and call the forest to fight"]
+  },
+  "mage": {
+    "name": "Mage",
+    "emoji": "🔮",
+    "pitch": "Master of spells. Fragile, but bends fire, frost, lightning and stranger things to their will.",
+    "keyStat": "magic",
+    "hp": { "base": 8, "perLevel": 3 },
+    "mana": { "base": 10, "perLevel": 4 },
+    "startingAbilities": ["elemental-affinity", "quick-study"],
+    "startingSpells": { "fixed": ["light"], "choose": 2, "from": ["firebolt", "frost-ray", "spark", "arcane-missile", "ice-armor", "shadow-step", "poison-spray"] },
+    "startingGold": 20,
+    "kit": {
+      "mainHand": { "name": "Oak Staff", "rarity": "common", "damage": "1d6", "damageType": "physical", "twoHanded": true, "value": 5 },
+      "body": { "name": "Apprentice Robes", "rarity": "common", "value": 5 },
+      "backpack": [
+        { "name": "Spellbook (blank pages)", "rarity": "common", "special": ["Copy spells you find so you never forget them"], "value": 25 },
+        { "name": "Mana Potion", "rarity": "common", "consumable": true, "special": ["Restores 2d4+2 mana"], "value": 30 }
+      ]
+    },
+    "abilities": {
+      "elemental-affinity": { "name": "Elemental Affinity", "level": 1, "uses": "always", "text": "Choose an element (Fire, Frost, Lightning, Poison, Shadow, Radiant or Arcane). Your spells of that element count as one rank higher. Record your choice in the ability's 'choice' field." },
+      "quick-study": { "name": "Quick Study", "level": 1, "uses": "always", "text": "Advantage when learning spells from scrolls, and you can identify a magic item's properties by touching it." },
+      "mana-surge": { "name": "Mana Surge", "level": 2, "uses": "once per rest", "text": "As a free action, regain mana equal to your level." },
+      "counterspell": { "name": "Counterspell", "level": 3, "uses": "once per fight", "text": "When an enemy casts a spell, roll d20 + Magic against its Attack number to cancel it." },
+      "spell-shield": { "name": "Spell Shield", "level": 4, "uses": "once per fight", "text": "When you're hit, gain Resist all equal to 2 × your Magic against that hit." },
+      "twin-spell": { "name": "Twin Spell", "level": 6, "uses": "once per rest", "text": "Cast a single-target spell on two targets for the cost of one." },
+      "arcane-recovery": { "name": "Arcane Recovery", "level": 8, "uses": "always", "text": "Short rests restore all your mana instead of half." },
+      "second-affinity": { "name": "Second Affinity", "level": 10, "uses": "always", "text": "Choose a second element for Elemental Affinity." }
+    },
+    "milestoneIdeas": ["Titles like the Stormcaller, Frostwarden, the Ever-Burning", "Combine two spells into one cast", "A familiar spirit made of your favourite element", "Cast one spell per rest for free at +3 ranks"]
+  },
+  "cleric": {
+    "name": "Cleric",
+    "emoji": "✨",
+    "pitch": "Holy warrior and healer. Keeps friends alive, protects them, and smites the darkness.",
+    "keyStat": "magic",
+    "hp": { "base": 12, "perLevel": 5 },
+    "mana": { "base": 8, "perLevel": 3 },
+    "startingAbilities": ["divine-ward", "turn-undead"],
+    "startingSpells": { "fixed": ["heal", "sacred-flame", "bless"], "choose": 0, "from": [] },
+    "startingGold": 15,
+    "kit": {
+      "mainHand": { "name": "Mace", "rarity": "common", "damage": "1d6", "damageType": "physical", "value": 5 },
+      "offHand": { "name": "Round Shield", "rarity": "common", "armor": 1, "value": 10 },
+      "body": { "name": "Chain Shirt", "rarity": "common", "armor": 2, "value": 50 },
+      "neck": { "name": "Holy Symbol", "rarity": "common", "value": 5 },
+      "backpack": [
+        { "name": "Healing Potion", "rarity": "common", "consumable": true, "special": ["Restores 2d4+2 HP"], "value": 25 }
+      ]
+    },
+    "abilities": {
+      "divine-ward": { "name": "Divine Ward", "level": 1, "uses": "once per rest", "text": "As your action, give one ally Resist all 2 (+1 per tier) for the rest of the fight." },
+      "turn-undead": { "name": "Turn Undead", "level": 1, "uses": "once per fight", "text": "Every undead nearby must beat 10 + your Magic on d20 + their tier or become Frightened. Weak undead (lower tier) are destroyed." },
+      "blessed-healer": { "name": "Blessed Healer", "level": 2, "uses": "always", "text": "Your healing spells heal extra equal to your Magic." },
+      "smite": { "name": "Smite", "level": 3, "uses": "once per fight", "text": "After you hit with a weapon, add 2d6 radiant (+1d6 per tier above 1)." },
+      "purify": { "name": "Purify", "level": 4, "uses": "once per rest", "text": "As your action, end Poisoned, Burning, Frightened or a curse on one creature." },
+      "guardian-spirit": { "name": "Guardian Spirit", "level": 6, "uses": "once per rest", "text": "Summon a glowing guardian for the fight. It attacks with d20 + your Magic for 1d8 + tier radiant, and soaks the first hit aimed at an ally." },
+      "sanctuary": { "name": "Sanctuary", "level": 8, "uses": "once per rest", "text": "One ally can't be targeted by attacks until they attack or the round ends." },
+      "miracle": { "name": "Miracle", "level": 10, "uses": "once per campaign", "text": "Ask your god for a miracle: restore the whole party to full, bring back a fallen hero, or something just as big." }
+    },
+    "milestoneIdeas": ["Titles like Lightbringer, the Merciful, Sunshield", "Wings of light: fly and shine like the dawn", "A healing wave that also burns enemies", "An aura that gives all allies Resist all 2"]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "sunken-tower",
+  "title": "The Sunken Tower",
+  "setting": "Classic fantasy · the Greenvale and the frozen Northreach",
+  "tone": "Adventurous and funny, a little spooky at night",
+  "length": "medium",
+  "deathRule": "knockout",
+  "status": "active",
+  "created": "2026-10-18",
+  "tier": 1,
+  "turn": 0,
+  "day": 1,
+  "timeOfDay": "morning",
+  "location": "brindle",
+  "party": [
+    {
+      "id": "kael",
+      "hp": 10,
+      "mana": 6,
+      "status": "ok",
+      "conditions": [],
+      "spent": [],
+      "shortRests": 0
+    }
+  ],
+  "quests": [
+    { "id": "missing-miller", "title": "Find the missing miller", "status": "active", "notes": "Last seen walking toward the old mill at dusk." }
+  ],
+  "npcs": {
+    "old-bess": { "name": "Old Bess", "location": "brindle", "role": "innkeeper of the Crooked Kettle", "attitude": "friendly", "notes": "Knows every rumour. Feeds heroes for free if they make her laugh." }
+  },
+  "questItems": [],
+  "flags": {},
+  "combat": null,
+  "mapArtifactUrl": null,
+  "_notes": "Template. party[].spent lists ability ids used since the last rest (or this fight, for once-per-fight). combat is null outside fights, or { round, enemies: [{ id, name, tier, hp, maxHp, defense, attack, damage, damageType, resist, vulnerable, immune, notes }] }. Remove this _notes field in real campaigns."
+}
