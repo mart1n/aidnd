@@ -1,0 +1,38 @@
+{
+  "id": "kael",
+  "name": "Kael",
+  "player": "Dad",
+  "class": "rogue",
+  "title": null,
+  "level": 1,
+  "xp": 0,
+  "stats": { "might": 0, "agility": 3, "wits": 1, "magic": 1 },
+  "boons": { "hp": 0, "mana": 0, "armor": 0, "resist": {} },
+  "abilities": [
+    { "id": "sneak-attack", "source": "rogue", "name": "Sneak Attack" },
+    { "id": "slippery", "source": "rogue", "name": "Slippery" }
+  ],
+  "spells": [],
+  "equipped": {
+    "head": null,
+    "body": { "name": "Leather Armor", "rarity": "common", "armor": 1, "value": 10 },
+    "gloves": null,
+    "boots": null,
+    "mainHand": { "name": "Dagger", "rarity": "common", "damage": "1d4", "damageType": "physical", "light": true, "value": 2 },
+    "offHand": { "name": "Dagger", "rarity": "common", "damage": "1d4", "damageType": "physical", "light": true, "value": 2 },
+    "ring1": null,
+    "ring2": null,
+    "neck": null
+  },
+  "backpack": [
+    { "name": "Thieves' Tools", "rarity": "common", "special": ["Needed to pick locks and disarm traps"], "value": 25 },
+    { "name": "Healing Potion", "rarity": "common", "consumable": true, "qty": 1, "special": ["Restores 2d4+2 HP"], "value": 25 }
+  ],
+  "gold": 30,
+  "appearance": "Short, quick, a scar across one eyebrow, always smiling like they know a secret.",
+  "backstory": "Grew up on the rooftops of a port city. Owes a favour to a thieves' guild they'd rather forget.",
+  "personality": "Curious, cheeky, loyal to friends.",
+  "activeCampaign": null,
+  "history": [],
+  "_notes": "Template. 'stats' are base values (point-buy + class bonus + level-up increases); gear bonuses are added by scripts/game.py. 'boons' are permanent extras (Toughen Up, quest rewards). Abilities copy id/source/name from rules/classes.json; add 'choice' for things like Elemental Affinity, or 'text'/'uses' for custom signature powers. Spells: { id, rank, mastery }. Remove this _notes field in real characters."
+}

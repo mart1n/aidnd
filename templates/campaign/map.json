@@ -1,0 +1,68 @@
+{
+  "regions": [
+    { "id": "greenvale", "name": "Greenvale", "description": "Rolling farmland, orchards and sleepy villages along the river Lune." },
+    { "id": "northreach", "name": "Northreach", "description": "Snow, pine forests and the great frost-city of Frostspire." }
+  ],
+  "locations": {
+    "brindle": {
+      "name": "Brindle",
+      "type": "town",
+      "region": "greenvale",
+      "x": 30,
+      "y": 65,
+      "discovered": true,
+      "visited": true,
+      "description": "A market town of crooked roofs and apple carts, where the river Lune bends.",
+      "notes": [],
+      "secret": "The mayor is secretly paying the bandits to leave Brindle alone.",
+      "services": ["inn", "blacksmith", "general-store", "temple"],
+      "inn": { "name": "The Crooked Kettle", "price": 5, "rumours": ["A blue light has been seen over the Sunken Tower at night.", "Frostspire's academy teaches frost magic to anyone with gold."] },
+      "shops": {
+        "anvil": {
+          "name": "Dunmore's Anvil",
+          "type": "blacksmith",
+          "owner": "Hilda Dunmore, a cheerful dwarf with singed eyebrows",
+          "lastRestockDay": 1,
+          "stock": [
+            { "name": "Longsword", "rarity": "common", "slot": "hand", "damage": "1d8", "damageType": "physical", "value": 15 },
+            { "name": "Chain Shirt", "rarity": "common", "slot": "body", "armor": 2, "value": 50 },
+            { "name": "Gauntlets of Might", "rarity": "uncommon", "slot": "gloves", "stats": { "might": 1 }, "value": 120 }
+          ]
+        }
+      }
+    },
+    "frostspire": {
+      "name": "Frostspire",
+      "type": "city",
+      "region": "northreach",
+      "x": 58,
+      "y": 15,
+      "discovered": true,
+      "visited": false,
+      "description": "A city of white towers carved into a glacier. Its academy hums with frost magic.",
+      "notes": [],
+      "secret": "",
+      "services": ["inn", "market", "enchanter", "spell-academy:frost", "temple"],
+      "shops": {}
+    },
+    "sunken-tower": {
+      "name": "The Sunken Tower",
+      "type": "dungeon",
+      "region": "greenvale",
+      "x": 48,
+      "y": 72,
+      "discovered": false,
+      "visited": false,
+      "description": "A wizard's tower half-swallowed by a marsh, leaning like a tired giant.",
+      "notes": [],
+      "secret": "The wizard Morvane is still inside, frozen in time, and the miller stumbled into his trap.",
+      "services": [],
+      "shops": {}
+    }
+  },
+  "routes": [
+    { "from": "brindle", "to": "frostspire", "days": 3, "terrain": "mountain pass", "danger": 3 },
+    { "from": "brindle", "to": "sunken-tower", "days": 1, "terrain": "marsh", "danger": 2 }
+  ],
+  "_notes": "Template. x/y are 0-100 (x: west→east, y: north→south). Types: city, town, village, dungeon, ruin, landmark, camp, wild. 'secret' never appears on the drawn map; 'description' and 'notes' do once discovered. Routes with 'road' in terrain draw as solid lines. Danger 0-5. Remove this _notes field in real campaigns."
+}

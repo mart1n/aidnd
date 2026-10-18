@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/game.py:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git fetch:*)",
+      "Bash(git log:*)",
+      "Edit(characters/**)",
+      "Edit(campaigns/**)",
+      "Write(characters/**)",
+      "Write(campaigns/**)"
+    ]
+  }
+}
