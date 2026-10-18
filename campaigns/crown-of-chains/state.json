@@ -1,0 +1,91 @@
+{
+  "id": "crown-of-chains",
+  "title": "Crown of Chains",
+  "setting": "Classic fantasy · the kingdom of Valdmark, ruled by the Ever-King Malvoren and his five Magisters",
+  "tone": "A mix: heroic adventure, spooky secrets and plenty of laughs",
+  "length": "epic",
+  "deathRule": "real",
+  "status": "active",
+  "created": "2026-10-18",
+  "tier": 1,
+  "turn": 0,
+  "day": 1,
+  "timeOfDay": "morning",
+  "location": "ashford",
+  "party": [
+    {
+      "id": "marjohkan",
+      "hp": 10,
+      "mana": 6,
+      "status": "ok",
+      "conditions": [],
+      "spent": [],
+      "shortRests": 0
+    },
+    {
+      "id": "magnus",
+      "hp": 8,
+      "mana": 16,
+      "status": "ok",
+      "conditions": [],
+      "spent": [],
+      "shortRests": 0
+    }
+  ],
+  "quests": [
+    {
+      "id": "tax-day",
+      "title": "Tax Day in Ashford",
+      "status": "active",
+      "notes": "The king's Collectors and a Magister have come to Ashford to count the town. Nobody knows who, or what, they'll take."
+    }
+  ],
+  "npcs": {
+    "hetty-bramblewick": {
+      "name": "Hetty Bramblewick",
+      "location": "ashford",
+      "role": "innkeeper of the Kettle & Crow",
+      "attitude": "friendly",
+      "notes": "Kind and nosy. Secretly an old rebel courier with a smugglers' tunnel in her cellar."
+    },
+    "pip-marlow": {
+      "name": "Pip Marlow",
+      "location": "ashford",
+      "role": "the miller's daughter, aged 10",
+      "attitude": "friendly",
+      "notes": "Has a spark of magic: flowers bloom around her when she's nervous."
+    },
+    "fen-marlow": {
+      "name": "Old Fen Marlow",
+      "location": "ashford",
+      "role": "the miller, Pip's dad",
+      "attitude": "friendly",
+      "notes": "Worried sick that someone will notice Pip's flowers."
+    },
+    "brannoc-steel": {
+      "name": "Captain Brannoc Steel",
+      "location": "ashford",
+      "role": "the king's sergeant-at-arms in Ashford",
+      "attitude": "wary",
+      "notes": "Gruff and loyal to the crown, but has a good heart. Has a sick sister."
+    },
+    "corvin-krake": {
+      "name": "Magister Corvin Krake, the Collector",
+      "location": "ashford",
+      "role": "one of the king's five Magisters; leads the hunts for the gifted",
+      "attitude": "hostile",
+      "notes": "Pompous, carries a ledger and counts everything. Arcane chain magic."
+    },
+    "pomfrey-trumpington": {
+      "name": "Pomfrey Trumpington",
+      "location": "ashford",
+      "role": "royal herald travelling with the Collectors",
+      "attitude": "neutral",
+      "notes": "SHOUTS every announcement. Accidentally reveals secrets."
+    }
+  },
+  "questItems": [],
+  "flags": {},
+  "combat": null,
+  "mapArtifactUrl": null
+}

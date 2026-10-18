@@ -1,0 +1,708 @@
+{
+  "regions": [
+    {
+      "id": "hearthlands",
+      "name": "The Hearthlands",
+      "description": "Gentle farmland, windmills and marshes in the south-west, where the king's tax-men are never far away."
+    },
+    {
+      "id": "thornwood",
+      "name": "The Thornwood",
+      "description": "An ancient, tangled forest in the east, full of strange beasts, riddling voices and the free city of Lanternhold."
+    },
+    {
+      "id": "kingsreach",
+      "name": "The Kingsreach",
+      "description": "The royal heartland around Ravencrown: black roads, watchtowers and forbidden places."
+    },
+    {
+      "id": "ember-peaks",
+      "name": "The Ember Peaks",
+      "description": "Smoking volcanic mountains in the north, home of the dwarves and the legend of the last dragon."
+    }
+  ],
+  "locations": {
+    "ashford": {
+      "name": "Ashford",
+      "type": "town",
+      "region": "hearthlands",
+      "x": 22,
+      "y": 75,
+      "discovered": true,
+      "visited": true,
+      "description": "A cosy market town of thatched roofs and a creaking windmill, where the King's Road begins. The king's banners hang over every door, whether folk like it or not.",
+      "notes": [],
+      "secret": "Hetty Bramblewick, the innkeeper, is an old rebel courier, and a smugglers' tunnel runs from her cellar toward the Drowned Abbey. Pip Marlow, the miller's daughter, has a spark of magic.",
+      "services": [
+        "inn",
+        "blacksmith",
+        "general-store",
+        "temple"
+      ],
+      "inn": {
+        "name": "The Kettle & Crow",
+        "price": 5,
+        "rumours": [
+          "The Collectors' prison wagons never take the King's Road. They roll west, into the marsh, toward the old Drowned Abbey.",
+          "Hetty's cellar is deeper than any cellar has a right to be. Ask her about it and she'll change the subject.",
+          "Up north in the Ember Peaks, the dwarves of Stonehollow have stopped coming to market. Smoke pours from the mountains day and night."
+        ]
+      },
+      "shops": {
+        "forge": {
+          "name": "Bram's Forge",
+          "type": "blacksmith",
+          "owner": "Bram Hollis, a huge, gentle smith who hums lullabies while he hammers",
+          "lastRestockDay": 1,
+          "stock": [
+            {
+              "name": "Shortsword",
+              "rarity": "common",
+              "slot": "hand",
+              "damage": "1d6",
+              "damageType": "physical",
+              "light": true,
+              "value": 10
+            },
+            {
+              "name": "Round Shield",
+              "rarity": "common",
+              "slot": "hand",
+              "armor": 1,
+              "value": 10
+            },
+            {
+              "name": "Chain Shirt",
+              "rarity": "common",
+              "slot": "body",
+              "armor": 2,
+              "value": 50
+            },
+            {
+              "name": "Shortbow",
+              "rarity": "common",
+              "slot": "hand",
+              "damage": "1d6",
+              "damageType": "physical",
+              "twoHanded": true,
+              "ranged": true,
+              "value": 25
+            },
+            {
+              "name": "Boots of the Fox",
+              "rarity": "uncommon",
+              "slot": "boots",
+              "stats": {
+                "agility": 1
+              },
+              "value": 120
+            },
+            {
+              "name": "Whisperfang",
+              "rarity": "rare",
+              "slot": "hand",
+              "damage": "1d4",
+              "damageType": "physical",
+              "light": true,
+              "extraDamage": [
+                {
+                  "dice": "1d6",
+                  "type": "shadow"
+                }
+              ],
+              "stats": {
+                "agility": 1
+              },
+              "lore": "A black-bladed dagger Bram swears he didn't make. It turned up on his anvil one foggy morning.",
+              "value": 600
+            }
+          ]
+        },
+        "sundries": {
+          "name": "Hobb's Sundries",
+          "type": "general-store",
+          "owner": "Widow Hobb, who knows the price of everything and the gossip about everyone",
+          "lastRestockDay": 1,
+          "stock": [
+            {
+              "name": "Healing Potion",
+              "rarity": "common",
+              "consumable": true,
+              "qty": 3,
+              "special": [
+                "Restores 2d4+2 HP"
+              ],
+              "value": 25
+            },
+            {
+              "name": "Mana Potion",
+              "rarity": "common",
+              "consumable": true,
+              "qty": 2,
+              "special": [
+                "Restores 2d4+2 mana"
+              ],
+              "value": 30
+            },
+            {
+              "name": "Antidote",
+              "rarity": "common",
+              "consumable": true,
+              "special": [
+                "Ends Poisoned, Resist poison 5 for an hour"
+              ],
+              "value": 20
+            },
+            {
+              "name": "Smoke Bomb",
+              "rarity": "common",
+              "consumable": true,
+              "special": [
+                "Everyone in an area becomes Hidden"
+              ],
+              "value": 20
+            },
+            {
+              "name": "Rope and Grapnel",
+              "rarity": "common",
+              "special": [
+                "50 feet of rope with an iron hook"
+              ],
+              "value": 3
+            },
+            {
+              "name": "Wand of Light",
+              "rarity": "uncommon",
+              "slot": "hand",
+              "damage": "1d4",
+              "damageType": "arcane",
+              "ranged": true,
+              "grantedSpells": [
+                {
+                  "spell": "light",
+                  "uses": "at will"
+                }
+              ],
+              "value": 90
+            }
+          ]
+        }
+      }
+    },
+    "dunmere": {
+      "name": "Dunmere",
+      "type": "village",
+      "region": "hearthlands",
+      "x": 40,
+      "y": 88,
+      "discovered": true,
+      "visited": false,
+      "description": "A sleepy river village of fishing boats and willow trees, with an old watermill that nobody uses any more.",
+      "notes": [],
+      "secret": "The watermill grinds by itself at night. A friendly ghost miller hides an old Vaelmont map of the Hearthlands' secret passages inside it.",
+      "services": [
+        "inn",
+        "general-store"
+      ],
+      "inn": {
+        "name": "The Leaping Trout",
+        "price": 5,
+        "rumours": [
+          "The old mill grinds by itself on moonless nights. Folk say it's haunted, but the ghost only ever asks riddles.",
+          "In Lanternhold, there's a woman called Mother Gorse who sells creatures you won't find anywhere else: glowing foxes, talking ravens, even a griffin once."
+        ]
+      },
+      "shops": {
+        "store": {
+          "name": "Nettie's Boathouse Store",
+          "type": "general-store",
+          "owner": "Nettie Reed, a cheerful old boatwoman with a parrot called Admiral",
+          "lastRestockDay": 1,
+          "stock": [
+            {
+              "name": "Healing Potion",
+              "rarity": "common",
+              "consumable": true,
+              "qty": 2,
+              "special": [
+                "Restores 2d4+2 HP"
+              ],
+              "value": 25
+            },
+            {
+              "name": "Fishing Net",
+              "rarity": "common",
+              "special": [
+                "Can tangle a small creature"
+              ],
+              "value": 2
+            },
+            {
+              "name": "Torch",
+              "rarity": "common",
+              "slot": "hand",
+              "damage": "1d4",
+              "damageType": "fire",
+              "qty": 3,
+              "value": 1
+            },
+            {
+              "name": "Helm of Clarity",
+              "rarity": "uncommon",
+              "slot": "head",
+              "stats": {
+                "wits": 1
+              },
+              "value": 110
+            }
+          ]
+        }
+      }
+    },
+    "drowned-abbey": {
+      "name": "The Drowned Abbey",
+      "type": "ruin",
+      "region": "hearthlands",
+      "x": 9,
+      "y": 57,
+      "discovered": false,
+      "visited": false,
+      "description": "A grey stone abbey sinking into the marsh, its bell tower tilted like a tired old man. Lights move in its windows at night.",
+      "notes": [],
+      "secret": "The magisters' secret waystation. Captured gifted folk are held in the flooded crypts before going to the Obsidian Spire. The crypt door opens to the right tune played on the old organ. Magister Krake's ledger is here, and a caged glimmerkit, and a Phoenix Draught hidden in the abbot's tomb.",
+      "services": [],
+      "shops": {}
+    },
+    "lanternhold": {
+      "name": "Lanternhold",
+      "type": "city",
+      "region": "thornwood",
+      "x": 72,
+      "y": 72,
+      "discovered": true,
+      "visited": false,
+      "description": "A city of a thousand lanterns built where the river meets the Thornwood. Merchants, scholars and beast-tamers fill its crooked streets, and the king's grip is weakest here.",
+      "notes": [],
+      "secret": "The Lantern Society rebels meet under the great clock tower. Their quartermaster, Tobin Quill, is secretly a spy for Magister Morrow.",
+      "services": [
+        "inn",
+        "market",
+        "enchanter",
+        "spell-academy:arcane",
+        "temple",
+        "beast-market"
+      ],
+      "inn": {
+        "name": "The Thousand Lights",
+        "price": 5,
+        "rumours": [
+          "Deep in the Thornwood there's a hollow where the trees grow in rings, and a voice asks riddles. Answer wrong and you wake up back at the forest edge with your boots on backwards.",
+          "The ice on Mirrorlake never melts, not even in high summer. Some say there's something huge and silver sleeping underneath.",
+          "The High Priestess of the Dawn can call back those who have fallen, they say. But the price is terribly high."
+        ]
+      },
+      "shops": {
+        "menagerie": {
+          "name": "Mother Gorse's Menagerie",
+          "type": "beast-market",
+          "owner": "Mother Gorse, a tiny, wrinkled beast-tamer with a hawk on each shoulder",
+          "lastRestockDay": 1,
+          "stock": [
+            {
+              "name": "Raven (pet)",
+              "rarity": "common",
+              "pet": {
+                "kind": "raven",
+                "trick": "Fetches a small object, or carries a message, once per rest",
+                "hp": 4
+              },
+              "special": [
+                "A pet. Can learn to say a few words"
+              ],
+              "value": 40
+            },
+            {
+              "name": "Ferret (pet)",
+              "rarity": "common",
+              "pet": {
+                "kind": "ferret",
+                "trick": "Squeezes into tiny gaps to steal a key or find a hidden latch, once per rest",
+                "hp": 3
+              },
+              "special": [
+                "A pet"
+              ],
+              "value": 30
+            },
+            {
+              "name": "War Hound (pet)",
+              "rarity": "uncommon",
+              "pet": {
+                "kind": "war hound",
+                "trick": "Bites an enemy for 1d6 + tier physical, once per fight",
+                "hp": 8
+              },
+              "special": [
+                "A pet"
+              ],
+              "value": 120
+            },
+            {
+              "name": "Glowmoth Swarm (pet)",
+              "rarity": "uncommon",
+              "pet": {
+                "kind": "glowmoth swarm",
+                "trick": "Always lights up the dark, and once per rest dazzles one enemy (disadvantage on its next attack)",
+                "hp": 2
+              },
+              "special": [
+                "A pet"
+              ],
+              "value": 90
+            }
+          ]
+        },
+        "market": {
+          "name": "The Lantern Market",
+          "type": "market",
+          "owner": "dozens of stalls under paper lanterns",
+          "lastRestockDay": 1,
+          "stock": [
+            {
+              "name": "Healing Potion",
+              "rarity": "common",
+              "consumable": true,
+              "qty": 4,
+              "special": [
+                "Restores 2d4+2 HP"
+              ],
+              "value": 25
+            },
+            {
+              "name": "Mana Potion",
+              "rarity": "common",
+              "consumable": true,
+              "qty": 3,
+              "special": [
+                "Restores 2d4+2 mana"
+              ],
+              "value": 30
+            },
+            {
+              "name": "Fire Flask",
+              "rarity": "common",
+              "consumable": true,
+              "special": [
+                "Thrown: 2d6 fire, and the target is Burning"
+              ],
+              "value": 30
+            },
+            {
+              "name": "Orb",
+              "rarity": "common",
+              "slot": "hand",
+              "mana": 2,
+              "value": 50
+            },
+            {
+              "name": "Ring of Sparks",
+              "rarity": "rare",
+              "slot": "ring",
+              "stats": {
+                "magic": 1
+              },
+              "spellPower": {
+                "lightning": 1
+              },
+              "value": 650
+            },
+            {
+              "name": "Cloak of the Fox",
+              "rarity": "uncommon",
+              "slot": "body",
+              "armor": 1,
+              "stats": {
+                "agility": 1
+              },
+              "special": [
+                "Leather armor with a fox-fur collar"
+              ],
+              "value": 130
+            },
+            {
+              "name": "Phoenix Draught",
+              "rarity": "rare",
+              "consumable": true,
+              "special": [
+                "Poured on a hero who died within the last hour: they return with half their max HP"
+              ],
+              "value": 600
+            }
+          ]
+        },
+        "college": {
+          "name": "The Lantern College",
+          "type": "spell-academy",
+          "owner": "Archmage Tull Pennyweather, who has spilled ink on every robe he owns",
+          "lastRestockDay": 1,
+          "stock": [
+            {
+              "name": "Scroll of Mage Hand",
+              "rarity": "common",
+              "special": [
+                "Spell scroll: Mage Hand (Arcane, Minor)"
+              ],
+              "value": 60
+            },
+            {
+              "name": "Scroll of Detect Magic",
+              "rarity": "common",
+              "special": [
+                "Spell scroll: Detect Magic (Arcane, Minor)"
+              ],
+              "value": 60
+            },
+            {
+              "name": "Scroll of Speak with Animals",
+              "rarity": "common",
+              "special": [
+                "Spell scroll: Speak with Animals (Arcane, Minor)"
+              ],
+              "value": 60
+            }
+          ]
+        }
+      }
+    },
+    "thornbacks-hollow": {
+      "name": "Thornback's Hollow",
+      "type": "dungeon",
+      "region": "thornwood",
+      "x": 88,
+      "y": 47,
+      "discovered": false,
+      "visited": false,
+      "description": "A ring of ancient, twisted trees deep in the Thornwood, guarded by a hedge-maze that moves when no one is looking.",
+      "notes": [],
+      "secret": "Lair of Thornback, an old green dragon who escaped the magisters by hiding behind his riddles. He speaks only in riddles until someone stumps him. He guards a dragon egg.",
+      "services": [],
+      "shops": {}
+    },
+    "mirrorlake": {
+      "name": "Mirrorlake",
+      "type": "landmark",
+      "region": "thornwood",
+      "x": 63,
+      "y": 46,
+      "discovered": false,
+      "visited": false,
+      "description": "A perfectly round lake that stays frozen all year, smooth as a mirror. On still days, you can see your reflection wink.",
+      "notes": [],
+      "secret": "Sylvenna the Silver, the oldest dragon, sleeps beneath the ice, sealed in by the magisters. Mirrors angled to bring sunlight through the ice will break the seal.",
+      "services": [],
+      "shops": {}
+    },
+    "ravencrown": {
+      "name": "Ravencrown",
+      "type": "city",
+      "region": "kingsreach",
+      "x": 42,
+      "y": 35,
+      "discovered": true,
+      "visited": false,
+      "description": "The black-walled capital of Valdmark, crowned by the king's palace and its nine spiked towers. Ravens circle it day and night.",
+      "notes": [],
+      "secret": "Under the city run the Rat Roads, the old Vaelmont secret passages, which reach right into the palace. Seven singing statues in the Square of Kings open the way.",
+      "services": [
+        "inn",
+        "market",
+        "enchanter",
+        "spell-academy:shadow",
+        "temple"
+      ],
+      "shops": {}
+    },
+    "obsidian-spire": {
+      "name": "The Obsidian Spire",
+      "type": "dungeon",
+      "region": "kingsreach",
+      "x": 26,
+      "y": 20,
+      "discovered": false,
+      "visited": false,
+      "description": "A needle of black glass on a lonely hill, home of the Magisterium. Nobody who goes in uninvited comes out.",
+      "notes": [],
+      "secret": "Captured gifted folk are kept here, and their magic is bottled to forge Chain-Iron. High Magister Grail's study hides his plan to betray the king.",
+      "services": [],
+      "shops": {}
+    },
+    "kingsgrave": {
+      "name": "The Kingsgrave",
+      "type": "ruin",
+      "region": "kingsreach",
+      "x": 57,
+      "y": 24,
+      "discovered": false,
+      "visited": false,
+      "description": "An overgrown hillside of old royal tombs. The king has forbidden anyone to go there.",
+      "notes": [],
+      "secret": "The crypts of House Vaelmont. Their doors open only for Vaelmont blood, which is Marjohkan. Dawnfang rests in Queen Elowen's tomb. A secret passage leads to the Rat Roads and the palace.",
+      "services": [],
+      "shops": {}
+    },
+    "stonehollow": {
+      "name": "Stonehollow",
+      "type": "town",
+      "region": "ember-peaks",
+      "x": 71,
+      "y": 12,
+      "discovered": false,
+      "visited": false,
+      "description": "A dwarf town carved into a mountainside, famous for the finest forge in Valdmark. Lately its halls are quiet, and its chimneys are cold.",
+      "notes": [],
+      "secret": "Most of the dwarves have been forced to work in the Ember Forge. Grimble Stonebeard knows a secret mine passage into it. An ancient riddle-lock vault hides the Stonehollow armory.",
+      "services": [
+        "inn",
+        "blacksmith",
+        "general-store",
+        "temple"
+      ],
+      "shops": {}
+    },
+    "ember-forge": {
+      "name": "The Ember Forge",
+      "type": "dungeon",
+      "region": "ember-peaks",
+      "x": 87,
+      "y": 22,
+      "discovered": false,
+      "visited": false,
+      "description": "A fortress built into a smoking volcano. Red light glows from its doors, and the mountain rumbles like something breathing.",
+      "notes": [],
+      "secret": "Vyrathax the Red is chained in the volcano's heart, her fire drained to forge Chain-Iron for Magister Ignatia Crowe.",
+      "services": [],
+      "shops": {}
+    },
+    "dragons-tooth": {
+      "name": "The Dragon's Tooth",
+      "type": "landmark",
+      "region": "ember-peaks",
+      "x": 48,
+      "y": 9,
+      "discovered": true,
+      "visited": false,
+      "description": "A colossal stone fang jutting from the mountains. The king says he slew the last dragon here, a hundred years ago.",
+      "notes": [],
+      "secret": "No dragon died here. Carvings near the top show dragons in chains and a crowned figure with a winged shadow. Storm-wyverns nest on the peak.",
+      "services": [],
+      "shops": {}
+    }
+  },
+  "routes": [
+    {
+      "from": "ashford",
+      "to": "dunmere",
+      "days": 1,
+      "terrain": "farm road",
+      "danger": 1
+    },
+    {
+      "from": "ashford",
+      "to": "drowned-abbey",
+      "days": 1,
+      "terrain": "marsh path",
+      "danger": 2
+    },
+    {
+      "from": "ashford",
+      "to": "ravencrown",
+      "days": 3,
+      "terrain": "King's Road",
+      "danger": 2
+    },
+    {
+      "from": "dunmere",
+      "to": "lanternhold",
+      "days": 2,
+      "terrain": "river road",
+      "danger": 1
+    },
+    {
+      "from": "lanternhold",
+      "to": "ravencrown",
+      "days": 3,
+      "terrain": "forest road",
+      "danger": 2
+    },
+    {
+      "from": "lanternhold",
+      "to": "mirrorlake",
+      "days": 2,
+      "terrain": "forest trail",
+      "danger": 2
+    },
+    {
+      "from": "lanternhold",
+      "to": "thornbacks-hollow",
+      "days": 2,
+      "terrain": "deep forest",
+      "danger": 3
+    },
+    {
+      "from": "mirrorlake",
+      "to": "thornbacks-hollow",
+      "days": 1.5,
+      "terrain": "deep forest",
+      "danger": 3
+    },
+    {
+      "from": "mirrorlake",
+      "to": "ravencrown",
+      "days": 2,
+      "terrain": "forest trail",
+      "danger": 2
+    },
+    {
+      "from": "ravencrown",
+      "to": "obsidian-spire",
+      "days": 1,
+      "terrain": "black road",
+      "danger": 3
+    },
+    {
+      "from": "ravencrown",
+      "to": "kingsgrave",
+      "days": 1,
+      "terrain": "overgrown cemetery path",
+      "danger": 2
+    },
+    {
+      "from": "ravencrown",
+      "to": "stonehollow",
+      "days": 3,
+      "terrain": "mountain road",
+      "danger": 2
+    },
+    {
+      "from": "stonehollow",
+      "to": "ember-forge",
+      "days": 1.5,
+      "terrain": "volcanic pass",
+      "danger": 4
+    },
+    {
+      "from": "stonehollow",
+      "to": "dragons-tooth",
+      "days": 1,
+      "terrain": "mountain trail",
+      "danger": 3
+    },
+    {
+      "from": "dragons-tooth",
+      "to": "obsidian-spire",
+      "days": 2,
+      "terrain": "scree slopes",
+      "danger": 3
+    }
+  ]
+}

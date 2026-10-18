@@ -457,6 +457,11 @@ def cmd_sheet(args):
         out.append(f"- {qty}{describe_item(it)}")
     if not ch.get("backpack"):
         out.append("- (empty)")
+    if ch.get("pets"):
+        out.append("\n## Pets")
+        for pet in ch["pets"]:
+            hp = f" · {pet['hp']} HP" if pet.get("hp") else ""
+            out.append(f"- **{pet.get('name')}** ({pet.get('kind', 'pet')}{hp}): {pet.get('trick', '')}")
     if ch.get("history"):
         out.append("\n## Legend")
         for h in ch["history"]:

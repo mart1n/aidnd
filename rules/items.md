@@ -128,6 +128,8 @@ A base weapon's damage or a base armor's Armor value doesn't count.
 | Antidote | ends Poisoned, Resist poison 5 for an hour | 20 |
 | Smoke Bomb | everyone in an area becomes Hidden | 20 |
 | Fire Flask | thrown: 2d6 fire, the target is Burning | 30 |
+| Phoenix Draught (rare) | poured on a hero who died within the last hour: they return with half their max HP. Never sold in villages or towns | 600 |
+| Scroll of Return (rare) | read aloud over a fallen hero, by anyone, within a day of their death: they return with 1 HP | 800 |
 | Spell Scroll | learn the spell (see `rules/rules.md`, section 5) | Minor 60, Greater 350, Grand 1,800 |
 
 ## Gold

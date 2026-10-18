@@ -94,6 +94,7 @@
   "appearance": "A reptilian mage with rare black scales, the colour of a moonless night.",
   "backstory": "Among his scaled people, black scales are an old sign of deep arcane power. The king's magisters hunt such gifted ones and carry them off to their tower. Magnus escaped them before they could take him, and he means to stop them taking anyone else.",
   "personality": "Serious and dangerous. He says little, and when he speaks, people listen.",
-  "activeCampaign": null,
-  "history": []
+  "activeCampaign": "crown-of-chains",
+  "history": [],
+  "pets": []
 }

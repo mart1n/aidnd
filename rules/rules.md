@@ -91,7 +91,7 @@ Each campaign chooses one of two rules when it is created.
 - **3 successes:** you stabilise and are Down.
 - **3 failures:** the character **dies**.
 - Any healing wakes a Dying character.
-- A dead hero can only be brought back by rare and costly magic: a temple's high priest, a legendary item, or a quest to the land of the dead.
+- A dead hero can only be brought back by rare and costly magic: a **Phoenix Draught** or **Scroll of Return** (see `rules/items.md`), a temple's high priest, a legendary item, or a quest to the land of the dead.
 - When a character dies, set `status` to `dead` in the campaign's `state.json`. Leave the character file alone, so the hero is remembered.
 
 ---
@@ -312,9 +312,22 @@ XP below is **per character, multiplied by the enemy's tier**:
 
 ---
 
-## 11. Changing the rules
+## 11. Pets
+
+Any hero can have pets. They're found, tamed, rescued, hatched or bought (beast markets in cities sell them).
+
+- **Where they live:** in the character's `pets` list, so they follow the hero across campaigns: `{ "name", "kind", "trick", "hp", "notes" }`.
+- **One trick each.** A pet has one helpful trick, used once per rest unless it says "always". For example: a raven fetches small things, a glimmerkit glows and sniffs out magic, a war hound bites (1d6 + tier physical). Using a trick is free; it doesn't take the hero's action.
+- **In a fight,** enemies mostly ignore pets. A pet that is hit and drops to 0 HP **runs off and hides**, then comes back after the fight. **Pets never die**, even with the real danger rule.
+- **Pets grow:** when its hero reaches a milestone level (5, 10, 15…), a pet can learn a second trick or grow into a bigger form. A dragon hatchling grows up slowly, one milestone at a time.
+- **Taming a wild creature:** a Wits or Magic roll, harder for fiercer beasts, plus a good idea (food, kindness, a rescue).
+
+---
+
+## 12. Changing the rules
 
 These rules are ours. When something isn't fun, change it here and note the change at the bottom.
 
 ### Rule changes
 - v1: first version.
+- v2: added pets (section 11), and revival items for the real danger rule (`rules/items.md`).

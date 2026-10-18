@@ -95,6 +95,7 @@
   "appearance": "Human, with long black hair and a large duelling scar slashed across his face.",
   "backstory": "The king had his whole family killed. Marjohkan survived, and now he wants revenge on the king and everyone who serves him.",
   "personality": "Charismatic and well liked. He could talk a man into giving him his last coin.",
-  "activeCampaign": null,
-  "history": []
+  "activeCampaign": "crown-of-chains",
+  "history": [],
+  "pets": []
 }
