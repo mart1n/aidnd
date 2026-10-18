@@ -8,9 +8,9 @@
   "status": "active",
   "created": "2026-10-18",
   "tier": 1,
-  "turn": 1,
+  "turn": 2,
   "day": 1,
-  "timeOfDay": "midday",
+  "timeOfDay": "afternoon",
   "location": "ashford",
   "party": [
     {
@@ -43,7 +43,7 @@
       "id": "rescue-pip",
       "title": "Rescue Pip Marlow",
       "status": "active",
-      "notes": "Magister Krake took Pip, the miller's daughter, in his prison wagon. Hetty Bramblewick may know where the wagons go."
+      "notes": "Krake's wagon took Pip west to the Drowned Abbey in the marsh. Hetty's cellar tunnel leads there, half a day underground."
     }
   ],
   "npcs": {

@@ -31,7 +31,9 @@
       "discovered": true,
       "visited": true,
       "description": "A cosy market town of thatched roofs and a creaking windmill, where the King's Road begins. The king's banners hang over every door, whether folk like it or not.",
-      "notes": [],
+      "notes": [
+        "A smugglers' tunnel runs from the Kettle & Crow's cellar toward the Drowned Abbey."
+      ],
       "secret": "Hetty Bramblewick, the innkeeper, is an old rebel courier, and a smugglers' tunnel runs from her cellar toward the Drowned Abbey. Pip Marlow, the miller's daughter, has a spark of magic.",
       "services": [
         "inn",
@@ -43,8 +45,6 @@
         "name": "The Kettle & Crow",
         "price": 5,
         "rumours": [
-          "The Collectors' prison wagons never take the King's Road. They roll west, into the marsh, toward the old Drowned Abbey.",
-          "Hetty's cellar is deeper than any cellar has a right to be. Ask her about it and she'll change the subject.",
           "Up north in the Ember Peaks, the dwarves of Stonehollow have stopped coming to market. Smoke pours from the mountains day and night."
         ]
       },
@@ -265,10 +265,12 @@
       "region": "hearthlands",
       "x": 9,
       "y": 57,
-      "discovered": false,
+      "discovered": true,
       "visited": false,
       "description": "A grey stone abbey sinking into the marsh, its bell tower tilted like a tired old man. Lights move in its windows at night.",
-      "notes": [],
+      "notes": [
+        "Hetty says the Collectors' wagons go here. Her cellar tunnel comes out near it."
+      ],
       "secret": "The magisters' secret waystation. Captured gifted folk are held in the flooded crypts before going to the Obsidian Spire. The crypt door opens to the right tune played on the old organ. Magister Krake's ledger is here, and a caged glimmerkit, and a Phoenix Draught hidden in the abbot's tomb.",
       "services": [],
       "shops": {}
