@@ -1,0 +1,72 @@
+<title>Crown of Chains Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:wght@400;700&display=swap">
+<style>
+:root{
+  /* Layout: one inked chart of the realm on top; beneath it, a ledger of known places read from the party's position. */
+  --paper:#e6eadf; --paper-2:#dbe0d2; --ink:#262b25; --ink-soft:#59614f; --rule:#a4ab98;
+  --pin:#3b3f8c; --pin-soft:rgba(59,63,140,.18);
+  --safe:#3f7d47; --risky:#a2701b; --deadly:#9e3a30;
+  --r1:#8fae72; --r2:#86a1bd; --r3:#cdb98a; --r4:#b49cc0; --r5:#c49a86; --r6:#8fb6ad;
+  --font-display:"IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --font-script:"IM Fell English", "Iowan Old Style", Georgia, serif;
+  --font-body:"Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#141a1e; --paper-2:#1b2328; --ink:#dfe5d8; --ink-soft:#97a393; --rule:#4a5650;
+  --pin:#a9afff; --pin-soft:rgba(169,175,255,.2);
+  --safe:#7cc184; --risky:#e2b35a; --deadly:#ec8277;
+  --r1:#4f6b3e; --r2:#3f5a77; --r3:#6f6243; --r4:#5e4a6c; --r5:#6c4c40; --r6:#3e6760; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#141a1e; --paper-2:#1b2328; --ink:#dfe5d8; --ink-soft:#97a393; --rule:#4a5650;
+  --pin:#a9afff; --pin-soft:rgba(169,175,255,.2);
+  --safe:#7cc184; --risky:#e2b35a; --deadly:#ec8277;
+  --r1:#4f6b3e; --r2:#3f5a77; --r3:#6f6243; --r4:#5e4a6c; --r5:#6c4c40; --r6:#3e6760; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:grid;gap:24px}
+header{display:grid;gap:4px}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+h1{font-family:var(--font-display);font-weight:400;font-size:clamp(1.9rem,5vw,3rem);line-height:1.05;margin:0;text-wrap:balance}
+.where{font-family:var(--font-script);font-style:italic;font-size:1.1rem;color:var(--ink-soft);margin:0}
+.chart{border:1px solid var(--rule);background:var(--paper-2);border-radius:2px;overflow:hidden}
+.chart-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.chart svg{display:block;width:100%;min-width:720px;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.85rem;color:var(--ink-soft);padding:10px 14px;border-top:1px solid var(--rule)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend svg{width:18px;height:12px}
+h2{font-family:var(--font-display);font-weight:400;font-size:1.5rem;margin:0}
+.places{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+.place{border-top:2px solid var(--rule);padding-top:10px;display:grid;gap:6px;min-width:0}
+.place.here{border-top-color:var(--pin)}
+.place h3{font-family:var(--font-display);font-weight:400;font-size:1.25rem;margin:0;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.kind{font-family:var(--font-body);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+.place p{margin:0;max-width:65ch}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.8rem;border:1px solid var(--rule);border-radius:999px;padding:1px 9px;color:var(--ink)}
+.here-tag{color:var(--pin);font-weight:700}
+.unvisited{font-style:italic;color:var(--ink-soft)}
+.routes{font-size:.9rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.d0,.d1,.d2{color:var(--safe)} .d3{color:var(--risky)} .d4,.d5{color:var(--deadly)}
+.note{font-size:.9rem;color:var(--ink-soft)}
+.svg-ink{fill:var(--ink)} .svg-soft{fill:var(--ink-soft)}
+@media (prefers-reduced-motion: no-preference){.pulse{animation:pulse 2.4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes pulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:.35;transform:scale(1.35)}}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Classic fantasy · the kingdom of Valdmark, ruled by the Ever-King Malvoren and his five Magisters</div>
+  <h1>Crown of Chains</h1>
+  <p class="where">The party is at Ashford · Day 1, morning</p>
+</header>
+<figure class="chart" style="margin:0">
+  <div class="chart-scroll"><svg viewBox="0 0 1000 640" role="img" aria-label="Map of the known world"><defs><filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter></defs><g filter="url(#soft)" opacity=".55"><circle cx="253.6" cy="450.0" r="95" fill="var(--r1)"/><circle cx="412.0" cy="517.6" r="95" fill="var(--r1)"/><circle cx="693.6" cy="434.4" r="95" fill="var(--r2)"/><circle cx="429.6" cy="242.0" r="95" fill="var(--r3)"/><circle cx="482.4" cy="106.8" r="95" fill="var(--r4)"/></g><rect x="14" y="14" width="972" height="612" fill="none" stroke="var(--rule)" stroke-width="1"/><g aria-hidden="true"><circle cx="930" cy="562" r="26" fill="none" stroke="var(--rule)"/><path d="M930,528 L936,562 L930,596 L924,562 Z" fill="var(--ink-soft)"/><path d="M896,562 L930,557 L964,562 L930,567 Z" fill="var(--rule)"/><text x="930" y="522" text-anchor="middle" class="svg-ink" font-family="var(--font-display)" font-size="16">N</text></g><text x="332.8" y="539.8" text-anchor="middle" class="svg-soft" font-family="var(--font-script)" font-style="italic" font-size="22" letter-spacing="6" opacity=".8">THE HEARTHLANDS</text><text x="693.6" y="490.4" text-anchor="middle" class="svg-soft" font-family="var(--font-script)" font-style="italic" font-size="22" letter-spacing="6" opacity=".8">THE THORNWOOD</text><text x="429.6" y="298.0" text-anchor="middle" class="svg-soft" font-family="var(--font-script)" font-style="italic" font-size="22" letter-spacing="6" opacity=".8">THE KINGSREACH</text><text x="482.4" y="162.8" text-anchor="middle" class="svg-soft" font-family="var(--font-script)" font-style="italic" font-size="22" letter-spacing="6" opacity=".8">THE EMBER PEAKS</text><line x1="253.6" y1="450.0" x2="412.0" y2="517.6" stroke="var(--safe)" stroke-width="2.2" stroke-linecap="round" opacity=".9"/><text x="332.8" y="477.8" text-anchor="middle" font-family="var(--font-body)" font-size="13" fill="var(--safe)" stroke="var(--paper-2)" stroke-width="4" paint-order="stroke" font-weight="700">1d</text><line x1="253.6" y1="450.0" x2="429.6" y2="242.0" stroke="var(--safe)" stroke-width="2.2" stroke-linecap="round" opacity=".9"/><text x="341.6" y="340.0" text-anchor="middle" font-family="var(--font-body)" font-size="13" fill="var(--safe)" stroke="var(--paper-2)" stroke-width="4" paint-order="stroke" font-weight="700">3d</text><line x1="412.0" y1="517.6" x2="693.6" y2="434.4" stroke="var(--safe)" stroke-width="2.2" stroke-linecap="round" opacity=".9"/><text x="552.8" y="470.0" text-anchor="middle" font-family="var(--font-body)" font-size="13" fill="var(--safe)" stroke="var(--paper-2)" stroke-width="4" paint-order="stroke" font-weight="700">2d</text><line x1="693.6" y1="434.4" x2="429.6" y2="242.0" stroke="var(--safe)" stroke-width="2.2" stroke-linecap="round" opacity=".9"/><text x="561.6" y="332.2" text-anchor="middle" font-family="var(--font-body)" font-size="13" fill="var(--safe)" stroke="var(--paper-2)" stroke-width="4" paint-order="stroke" font-weight="700">3d</text><circle class="pulse" cx="253.6" cy="450.0" r="20" fill="var(--pin-soft)" stroke="var(--pin)" stroke-width="2"/><rect x="246.6" y="443.0" width="14" height="14" fill="var(--ink)" stroke="var(--ink)" stroke-width="2"/><text x="253.6" y="432.0" text-anchor="middle" class="svg-ink" font-family="var(--font-display)" font-size="17" font-weight="400" stroke="var(--paper-2)" stroke-width="5" paint-order="stroke">Ashford</text><text x="253.6" y="484.0" text-anchor="middle" fill="var(--pin)" font-family="var(--font-body)" font-size="13" font-weight="700" letter-spacing="2" stroke="var(--paper-2)" stroke-width="4" paint-order="stroke">YOU ARE HERE</text><circle cx="412.0" cy="517.6" r="5.5" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><text x="412.0" y="499.6" text-anchor="middle" class="svg-ink" font-family="var(--font-display)" font-size="17" font-weight="400" stroke="var(--paper-2)" stroke-width="5" paint-order="stroke">Dunmere</text><circle cx="693.6" cy="434.4" r="11" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><circle cx="693.6" cy="434.4" r="6" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><text x="693.6" y="416.4" text-anchor="middle" class="svg-ink" font-family="var(--font-display)" font-size="21" font-weight="400" stroke="var(--paper-2)" stroke-width="5" paint-order="stroke">Lanternhold</text><circle cx="429.6" cy="242.0" r="11" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><circle cx="429.6" cy="242.0" r="6" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><text x="429.6" y="224.0" text-anchor="middle" class="svg-ink" font-family="var(--font-display)" font-size="21" font-weight="400" stroke="var(--paper-2)" stroke-width="5" paint-order="stroke">Ravencrown</text><path d="M482.4,97.8 L490.4,106.8 L482.4,115.8 L474.4,106.8 Z" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><text x="482.4" y="88.8" text-anchor="middle" class="svg-ink" font-family="var(--font-display)" font-size="17" font-weight="400" stroke="var(--paper-2)" stroke-width="5" paint-order="stroke">The Dragon&#x27;s Tooth</text></svg></div>
+  <figcaption class="legend"><span><svg viewBox="0 0 18 12"><circle cx="9" cy="6" r="5" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="9" cy="6" r="2.5" fill="var(--ink)"/></svg>City</span><span><svg viewBox="0 0 18 12"><rect x="4" y="1" width="10" height="10" fill="var(--ink)"/></svg>Town</span><span><svg viewBox="0 0 18 12"><circle cx="9" cy="6" r="4" fill="var(--ink)"/></svg>Village</span><span><svg viewBox="0 0 18 12"><path d="M9,1 L15,11 L3,11 Z" fill="var(--ink)"/></svg>Dungeon / ruin</span><span><svg viewBox="0 0 18 12"><path d="M9,0 L15,6 L9,12 L3,6 Z" fill="var(--ink)"/></svg>Landmark</span><span><svg viewBox="0 0 18 12"><circle cx="9" cy="6" r="4" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="1.5"/></svg>Hollow: not yet visited</span><span><svg viewBox="0 0 18 12"><line x1="1" y1="6" x2="17" y2="6" stroke="var(--ink-soft)" stroke-width="2"/></svg>Road</span><span><svg viewBox="0 0 18 12"><line x1="1" y1="6" x2="17" y2="6" stroke="var(--ink-soft)" stroke-width="2" stroke-dasharray="4 3"/></svg>Wild path · days to travel</span><span><svg viewBox="0 0 18 12"><line x1="1" y1="6" x2="17" y2="6" stroke="var(--safe)" stroke-width="3"/></svg>Safe</span><span><svg viewBox="0 0 18 12"><line x1="1" y1="6" x2="17" y2="6" stroke="var(--risky)" stroke-width="3"/></svg>Risky</span><span><svg viewBox="0 0 18 12"><line x1="1" y1="6" x2="17" y2="6" stroke="var(--deadly)" stroke-width="3"/></svg>Dangerous</span></figcaption>
+</figure>
+<section style="display:grid;gap:14px">
+  <h2>Known places</h2>
+  <div class="places"><article class="place here"><h3>Ashford<span class="kind">town · The Hearthlands</span></h3><div class="note"><span class="here-tag">You are here</span></div><p>A cosy market town of thatched roofs and a creaking windmill, where the King&#x27;s Road begins. The king&#x27;s banners hang over every door, whether folk like it or not.</p><div class="chips"><span class="chip">inn</span><span class="chip">blacksmith</span><span class="chip">general store</span><span class="chip">temple</span></div><div class="routes"><span class="d1">Dunmere · 1 day · farm road · quiet</span><br><span class="d2">Ravencrown · 3 days · King&#x27;s Road · watchful</span></div></article><article class="place"><h3>Dunmere<span class="kind">village · The Hearthlands</span></h3><div class="note"><span class="unvisited">Heard of, not yet visited</span></div><p>A sleepy river village of fishing boats and willow trees, with an old watermill that nobody uses any more.</p><div class="routes"><span class="d1">Ashford · 1 day · farm road · quiet</span><br><span class="d1">Lanternhold · 2 days · river road · quiet</span></div></article><article class="place"><h3>Lanternhold<span class="kind">city · The Thornwood</span></h3><div class="note"><span class="unvisited">Heard of, not yet visited</span></div><p>A city of a thousand lanterns built where the river meets the Thornwood. Merchants, scholars and beast-tamers fill its crooked streets, and the king&#x27;s grip is weakest here.</p><div class="routes"><span class="d1">Dunmere · 2 days · river road · quiet</span><br><span class="d2">Ravencrown · 3 days · forest road · watchful</span></div></article><article class="place"><h3>Ravencrown<span class="kind">city · The Kingsreach</span></h3><div class="note"><span class="unvisited">Heard of, not yet visited</span></div><p>The black-walled capital of Valdmark, crowned by the king&#x27;s palace and its nine spiked towers. Ravens circle it day and night.</p><div class="routes"><span class="d2">Ashford · 3 days · King&#x27;s Road · watchful</span><br><span class="d2">Lanternhold · 3 days · forest road · watchful</span></div></article><article class="place"><h3>The Dragon&#x27;s Tooth<span class="kind">landmark · The Ember Peaks</span></h3><div class="note"><span class="unvisited">Heard of, not yet visited</span></div><p>A colossal stone fang jutting from the mountains. The king says he slew the last dragon here, a hundred years ago.</p></article></div>
+  <p class="note">Somewhere beyond the edges, 7 more places wait to be found.</p>
+</section>
+</div>
