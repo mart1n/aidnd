@@ -128,7 +128,7 @@
               "name": "Healing Potion",
               "rarity": "common",
               "consumable": true,
-              "qty": 3,
+              "qty": 1,
               "special": [
                 "Restores 2d4+2 HP"
               ],
@@ -150,15 +150,6 @@
               "consumable": true,
               "special": [
                 "Ends Poisoned, Resist poison 5 for an hour"
-              ],
-              "value": 20
-            },
-            {
-              "name": "Smoke Bomb",
-              "rarity": "common",
-              "consumable": true,
-              "special": [
-                "Everyone in an area becomes Hidden"
               ],
               "value": 20
             },

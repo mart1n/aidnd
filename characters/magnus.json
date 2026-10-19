@@ -88,9 +88,19 @@
       ],
       "value": 30,
       "qty": 1
+    },
+    {
+      "name": "Healing Potion",
+      "rarity": "common",
+      "consumable": true,
+      "qty": 1,
+      "special": [
+        "Restores 2d4+2 HP"
+      ],
+      "value": 25
     }
   ],
-  "gold": 20,
+  "gold": 0,
   "appearance": "A reptilian mage with rare black scales, the colour of a moonless night.",
   "backstory": "Among his scaled people, black scales are an old sign of deep arcane power. The king's magisters hunt such gifted ones and carry them off to their tower. Magnus escaped them before they could take him, and he means to stop them taking anyone else.",
   "personality": "Serious and dangerous. He says little, and when he speaks, people listen.",

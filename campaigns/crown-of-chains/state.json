@@ -8,7 +8,7 @@
   "status": "active",
   "created": "2026-10-18",
   "tier": 1,
-  "turn": 2,
+  "turn": 3,
   "day": 1,
   "timeOfDay": "afternoon",
   "location": "ashford",
@@ -88,6 +88,13 @@
       "role": "royal herald travelling with the Collectors",
       "attitude": "neutral",
       "notes": "SHOUTS every announcement. Accidentally reveals secrets."
+    },
+    "widow-hobb": {
+      "name": "Widow Hobb",
+      "location": "ashford",
+      "role": "owner of Hobb's Sundries",
+      "attitude": "friendly",
+      "notes": "Loves gossip. Gave Marjohkan a deal in exchange for the full story of the Tax Day smoke escape."
     }
   },
   "questItems": [],

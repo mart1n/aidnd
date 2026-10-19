@@ -5,7 +5,7 @@
   "class": "rogue",
   "title": null,
   "level": 1,
-  "xp": 15,
+  "xp": 25,
   "stats": {
     "might": 0,
     "agility": 3,
@@ -78,10 +78,20 @@
         "Restores 2d4+2 HP"
       ],
       "value": 25,
-      "qty": 1
+      "qty": 2
+    },
+    {
+      "name": "Smoke Bomb",
+      "rarity": "common",
+      "consumable": true,
+      "qty": 1,
+      "special": [
+        "Fills an area with smoke; everyone inside becomes Hidden"
+      ],
+      "value": 20
     }
   ],
-  "gold": 30,
+  "gold": 0,
   "appearance": "Human, with long black hair and a large duelling scar slashed across his face.",
   "backstory": "The king had his whole family killed. Marjohkan survived, and now he wants revenge on the king and everyone who serves him.",
   "personality": "Charismatic and well liked. He could talk a man into giving him his last coin.",

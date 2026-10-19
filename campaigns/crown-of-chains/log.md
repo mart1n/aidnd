@@ -6,3 +6,4 @@ The adventure is just beginning. Marjohkan, a scarred human rogue seeking reveng
 ## Turns
 - **Turn 1 (Day 1, midday):** On Tax Day, Magister Krake spotted Pip's magic and Magnus's black scales. Marjohkan's smoke bomb let both heroes escape, but Krake's chains snatched Pip into his prison wagon. Hetty pulled the heroes into the Kettle & Crow.
 - **Turn 2 (Day 1, afternoon):** Hetty revealed the old smugglers' tunnel in her cellar, which leads to the Drowned Abbey where the wagons go. The heroes went shopping before leaving.
+- **Turn 3 (Day 1, afternoon):** Marjohkan haggled with Widow Hobb (and paid her in gossip). The party pooled all 50 gold for 2 healing potions and a smoke bomb.
